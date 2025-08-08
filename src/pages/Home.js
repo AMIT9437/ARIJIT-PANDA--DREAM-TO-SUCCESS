@@ -42,22 +42,22 @@ export default function Home() {
       <h3>Our Services</h3>
       <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         <div style={{ width: "200px", textAlign: "center" }}>
-          <img src="/images/audit.jpg" alt="Audit" style={{ width: "100%", borderRadius: "8px" }} />
+          <img src="/images/services/audit.jpg" alt="Audit" style={{ width: "100%", borderRadius: "8px" }} />
           <p>Audit & Assurance – Ensure compliance and accuracy.</p>
         </div>
 
         <div style={{ width: "200px", textAlign: "center" }}>
-          <img src="/images/taxation.jpg" alt="Taxation" style={{ width: "100%", borderRadius: "8px" }} />
+          <img src="/images/services/taxation.jpg" alt="Taxation" style={{ width: "100%", borderRadius: "8px" }} />
           <p>Taxation – Optimize taxes, maximize savings.</p>
         </div>
 
         <div style={{ width: "200px", textAlign: "center" }}>
-          <img src="/images/gst.jpg" alt="GST" style={{ width: "100%", borderRadius: "8px" }} />
+          <img src="/images/services/gst.jpg" alt="GST" style={{ width: "100%", borderRadius: "8px" }} />
           <p>GST Solutions – Hassle-free registration, filing & advisory.</p>
         </div>
 
         <div style={{ width: "200px", textAlign: "center" }}>
-          <img src="/images/fund.jpg" alt="Fund Management" style={{ width: "100%", borderRadius: "8px" }} />
+          <img src="/images/services/fund-management.jpg" alt="Fund Management" style={{ width: "100%", borderRadius: "8px" }} />
           <p>Fund Management – Strategic investment & resource planning.</p>
         </div>
       </div>
@@ -78,3 +78,4 @@ export default function Home() {
     </div>
   );
 }
+
