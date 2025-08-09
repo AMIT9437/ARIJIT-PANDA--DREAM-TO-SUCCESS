@@ -1,32 +1,37 @@
 import React from "react";
-import { Navbar, Nav, Button, Container } from "react-bootstrap";
+import { Navbar as RBNavbar, Nav, Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-export default function CustomNavbar() {
+export default function Navbar() {
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
+    <RBNavbar bg="light" expand="lg" className="shadow-sm" fixed="top">
       <Container>
-        {/* Left - Hamburger */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* Hamburger toggler is placed automatically on the left */}
+        <RBNavbar.Toggle aria-controls="main-nav" />
 
-        {/* Center - Brand Name */}
-        <Navbar.Brand href="/">Dream 2 Success</Navbar.Brand>
+        {/* Brand (left of toggler on wide screens, visible always) */}
+        <RBNavbar.Brand as={Link} to="/" className="d-flex align-items-center">
+          <img src="/images/logo.png" alt="logo" style={{ width: 40, height: 40, marginRight: 8 }} />
+          <span>Dream 2 Success</span>
+        </RBNavbar.Brand>
 
-        {/* Right - Login / Signup */}
-        <div className="ms-auto d-flex align-items-center">
-          <Button variant="outline-primary" className="me-2">Login</Button>
-          <Button variant="primary">Sign Up</Button>
-        </div>
-
-        {/* Dropdown Menu */}
-        <Navbar.Collapse id="basic-navbar-nav">
+        <RBNavbar.Collapse id="main-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+            <Nav.Link as={Link} to="/testimonials">Testimonials</Nav.Link>
+            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+
+          {/* Right side buttons */}
+          <div className="d-flex">
+            <Button as={Link} to="/login" variant="outline-primary" className="me-2">Log in</Button>
+            <Button as={Link} to="/signup" variant="primary">Sign up</Button>
+          </div>
+        </RBNavbar.Collapse>
       </Container>
-    </Navbar>
+    </RBNavbar>
   );
 }
