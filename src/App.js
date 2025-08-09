@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,41 +14,9 @@ import Blog from "./pages/Blog";
 export default function App() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif" }}>
-      {/* Bootstrap Navbar */}
-      <Navbar bg="light" expand="lg" className="shadow-sm">
-        <Container>
-          {/* Brand / Logo */}
-          <Navbar.Brand href="/">Dream 2 Success</Navbar.Brand>
-
-          {/* Hamburger menu button */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-          {/* Menu items */}
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/services">Services</Nav.Link>
-              <Nav.Link href="/testimonials">Testimonials</Nav.Link>
-              <Nav.Link href="/blog">Blog</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-            </Nav>
-
-            {/* Right side buttons */}
-            <div className="d-flex">
-              <Button variant="outline-primary" href="/login" className="me-2">
-                Log in
-              </Button>
-              <Button variant="primary" href="/signup">
-                Sign up
-              </Button>
-            </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* Main content */}
-      <div style={{ minHeight: "80vh", padding: "20px" }}>
+      <Navbar />
+      {/* add top padding so fixed navbar doesn't cover content */}
+      <main style={{ minHeight: "80vh", padding: "20px", paddingTop: "90px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -60,9 +27,7 @@ export default function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
-      </div>
-
-      {/* Footer */}
+      </main>
       <Footer />
     </div>
   );
