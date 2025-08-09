@@ -11,7 +11,7 @@ export default function Navbar() {
 
         {/* Brand (left of toggler on wide screens, visible always) */}
         <RBNavbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          <img src="/images/logo.png" alt="logo" style={{ width: 40, height: 40, marginRight: 8 }} />
+          <img src="/images/logo.jpg" alt="logo" style={{ width: 40, height: 40, marginRight: 8 }} />
           <span>Dream 2 Success</span>
         </RBNavbar.Brand>
 
@@ -35,3 +35,4 @@ export default function Navbar() {
     </RBNavbar>
   );
 }
+
