@@ -1,31 +1,44 @@
-/* Make all images scale on small screens */
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  padding-top: 90px; /* space for fixed navbar */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive images */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Make all divs and sections wrap properly */
-.container, .row, section {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
+/* General container padding */
+.container {
+  padding: 20px;
 }
 
-/* Ensure flex layouts wrap */
-.flex {
-  flex-wrap: wrap;
-}
-
-/* Force long text to wrap */
-p, h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-}
-
-/* Adjust font size on small screens */
-@media (max-width: 768px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.1rem; }
-  .hide-mobile { display: none; } /* optional: hide things on mobile */
+/* Footer styling */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
 }
